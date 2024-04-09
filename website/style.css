@@ -1,0 +1,143 @@
+body {
+    background: #ffd700; /* Gold background */
+}
+
+#app {
+    color: #333; /* Dark gray text color */
+    font-size: 20px;
+    display: grid;
+    grid-auto-rows: 150px, auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "headline" "entry" "form";
+    grid-gap: 10px;
+    padding: 20px 10vh;
+    background: #f0e68c; /* Khaki background */
+    
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.entry {
+    background: #fafad2; /* Light goldenrod yellow background */
+    grid-area: entry;
+    margin-bottom: 25px;
+}
+
+form {
+    grid-area: form;
+    display: grid;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    grid-gap: 10px;
+}
+
+#entryHolder {
+    padding: 15px;
+}
+
+#date::before {
+    content: "Date : ";
+}
+
+#temp::before {
+    content: "Temperature : ";
+}
+
+#content::before {
+    content: "You're feeling ";
+}
+
+.headline {
+    display: grid;
+    grid-area: headline;
+    align-self: center;
+    justify-content: center;
+}
+
+.title {
+    display: inline-flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 24px;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 320px;
+    background: #ffd700; /* Gold background */
+    color: #333; /* Dark gray text color */
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button {
+    width: 320px;
+    height: 40px;
+    background: #8b4513; /* Saddle brown background */
+    color: #fff; /* White text color */
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+}
+
+button.invalid {
+    cursor: not-allowed;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+textarea {
+    background: #ffd700; /* Gold background */
+    color: #333; /* Dark gray text color */
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Style for Placeholder Text*/
+
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #333; /* Dark gray placeholder text color */
+    font-family: 'Oswald', sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #333; /* Dark gray placeholder text color */
+    font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #333; /* Dark gray placeholder text color */
+    font-family: 'Oswald', sans-serif;
+}
+
+@media (min-width: 780px) {
+    #app {
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-areas: "headline headline headline" "form entry entry";
+        height: 97vh;
+    }
+}
